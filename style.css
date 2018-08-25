@@ -4,10 +4,20 @@
     margin: 0;
     font-family: 'Open Sans', sans-serif;    
     outline: none;
+    box-sizing: border-box;
 }
 
 .header{
     padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.495);
+    z-index: 2;
+}
+
+.header img{
+    width: 30px;
+    margin-right: 10px;
 }
 
 .header span{
@@ -18,7 +28,7 @@
 .url-shortner{
     background-color: #366ED1;
     width: 100%;
-    padding: 30px 110px;
+    padding: 40px 110px;
     color: #fff;
     transition: all 0.2s ease-in;
 }
@@ -64,4 +74,64 @@
 
 #animate{
     transition: all .3s;    
+}
+
+
+.disabled{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+.backdrop{
+    height: 100vh;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.295);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.popup-container{
+    position: relative;
+    background-color: #fff;
+    z-index: 4;
+    padding: 40px 60px 40px 60px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-radius: 5px;
+    color: #646464;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.336);
+    animation: scale 0.3s ease-in;
+}
+
+@keyframes scale{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+#popup{
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.popup-container i{
+    color: #979797;
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+.popup-container i:hover{
+    cursor: pointer;
 }

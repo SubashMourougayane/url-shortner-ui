@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">    
+    <link rel="shortcut icon" href="./exnewlogo.png">
     <script src="script.js"></script>
-    <title>URL Shortner</title>
+    <title>Link</title>
 </head>
 <body>
     <header class="header">
-        <span>URL Shortner</span>
+        <img src="exnewlogo.png" alt="E X O R T"/>
+        <span>Link</span>
     </header>
     <section class="url-shortner">
         <h1 class="heading">Simplify your links</h1>
@@ -22,5 +24,13 @@
             <button  id = "copy-btn" class="btn" onclick="copyfunction()">copy url</button>
         </div>
     </section>
+    <div id="popup" class="disabled">
+        <div class="backdrop" onclick="remove()">
+        </div>
+        <div class="popup-container">
+            <i onclick="remove()">&times;</i>
+            <span>Give your original URL in the input box!!</span>
+        </div>
+    </div>
 </body>
 </html>

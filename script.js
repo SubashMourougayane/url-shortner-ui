@@ -18,12 +18,26 @@ function myfunction(event){
         });
     }
     console.log(document.getElementsByClassName('hidden'));
-    document.getElementById("animate").classList.remove("hidden")
-    document.getElementById("animate").classList.add("active")
+    if(document.getElementById('original-url').value!="")
+    {
+        document.getElementById("animate").classList.remove("hidden")
+        document.getElementById("animate").classList.add("active")
+    }
+    else{
+    document.getElementById('popup').classList.toggle('disabled');
+    }
 }
 
 function copyfunction(){
-    var copyText = document.getElementById("copy-btn").value;
+    var copyText = document.getElementById("short-url");
+    console.log("element-->>",copyText);
     copyText.select();
     document.execCommand("copy");
+    console.log(copyText);
+}
+
+function remove(){
+    document.getElementById('popup').classList.toggle('disabled');
+
+    console.log('hello');
 }
