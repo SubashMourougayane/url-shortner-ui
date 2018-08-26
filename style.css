@@ -65,11 +65,18 @@
 
 .url-shortner input[type="url"]{
     padding: 10px 15px;
-    width: 50%;
+    width: 45%;
     border-radius: 2px;
     margin-right: 10px;
     margin:10px;
+    transition: all 0.3s ease-in;
 }
+
+.url-shortner input[type="url"]:focus{
+    transform: scale(1.005);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.342);
+}
+
 .hidden{
     max-height: 0;
     opacity: 0;
@@ -113,7 +120,6 @@
     background-color: #fff;
     z-index: 4;
     padding: 40px 60px 40px 60px;
-    height: 90px;
     border-radius: 5px;
     color: #646464;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.336);
@@ -132,8 +138,9 @@
     color: #f64646;
     font-size: 25px;
     position: absolute;
-    right: 20px;
-    top: 5px;
+    right: 10px;
+    top: -5px;
+    padding: 5px;
 }
 
 .popup-container i:hover{
@@ -155,4 +162,70 @@ body{
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.305);
     color: #555555;
+}
+
+
+/* mobile view */
+@media only screen and (max-width:900px){
+
+    
+    .header img{
+        width: 25px;
+    }
+    
+    .url-shortner{
+        padding: 20px 40px 20px 40px;
+    }
+
+    .url-shortner input[type="url"]{
+        width: 70%;
+    }
+    .popup-container{
+        padding: 40px 30px 40px 30px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    
+    .url-shortner{
+        padding: 20px 20px 20px 20px;
+    }
+    .popup-container{
+        padding: 40px 30px 40px 30px;
+        margin: 10px;
+    }
+
+}
+
+@media only screen  and (max-width:550px){
+    .header{
+        padding: 10px 10px;
+    }
+    
+    .header img{
+        width: 30px;
+        margin-right: 10px;
+    }
+    
+    .header span{
+        font-size:18px;
+    }
+    
+    .url-shortner{
+        text-align: center;
+        padding: 20px 10px 45px 10px;
+    }
+    
+    
+    .url-shortner input[type="url"]{
+        width: 85%;
+        margin:25px 0;
+    }
+
+    .popup-container{
+        padding: 35px 30px 35px 30px;
+        margin: 10px;
+    }
+    
 }
