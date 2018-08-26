@@ -11,26 +11,29 @@
     <title>Link</title>
 </head>
 <body>
-    <header class="header">
-        <img src="exnewlogo.png" alt="E X O R T"/>
-        <span>Link</span>
-    </header>
-    <section class="url-shortner">
-        <h1 class="heading">Simplify your links</h1>
-            <input type="url" placeholder="Your original URL here" id="original-url">
-            <button class="btn" onclick="myfunction()">shorten url</button>
-        <div id="animate" class="hidden">
-            <input type="url" name="" placeholder="Shortened URL" id="short-url">
-            <button  id = "copy-btn" class="btn" onclick="copyfunction()">copy url</button>
-        </div>
-    </section>
-    <div id="popup" class="disabled">
-        <div class="backdrop" onclick="remove()">
-        </div>
-        <div class="popup-container">
-            <i onclick="remove()">&times;</i>
-            <span>Give your original URL in the input box!!</span>
+    <div>
+        <header class="header">
+            <img src="exnewlogo.png" alt="E X O R T"/>
+            <span>Link</span>
+        </header>
+        <section class="url-shortner">
+            <h1 class="heading">Simplify your links</h1>
+                <input type="url" placeholder="Your original URL here" id="original-url">
+                <button class="btn" onclick="myfunction()">shorten url</button>
+            <div id="animate" class="hidden">
+                <input type="url" name="" placeholder="Shortened URL" id="short-url">
+                <button  id = "copy-btn" class="btn" onclick="copyfunction()">copy url</button>
+            </div>
+        </section>
+        <div id="popup" class="disabled">
+            <div class="backdrop" onclick="remove()">
+            </div>
+            <div class="popup-container">
+                <i onclick="remove()">&times;</i>
+                <span>Give your original URL in the input box!!</span>
+            </div>
         </div>
     </div>
+    <footer class="footer">Link, powered by E X O R T &copy;2018</footer>
 </body>
 </html>
